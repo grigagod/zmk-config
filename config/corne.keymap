@@ -45,7 +45,7 @@
           quick-tap-ms = <QUICK_TAP_MS>;
           require-prior-idle-ms = <PRIOR_IDLE_MS>;
           bindings = <&kp>, <&kp>;
-          hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+          hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
           hold-trigger-on-release;
         };
 
@@ -57,13 +57,19 @@
           quick-tap-ms = <QUICK_TAP_MS>;
           require-prior-idle-ms = <PRIOR_IDLE_MS>;
           bindings = <&kp>, <&kp>;
-          hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+          hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
           hold-trigger-on-release;
         };
     };
 
     combos {
         compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <21 22>; // J + K
+            bindings = <&kp ESC>;
+            layers = <BASE>;
+        };
         combo_apostrophe {
             timeout-ms = <50>;
             key-positions = <23 24>; // L + ;
