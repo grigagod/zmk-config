@@ -62,52 +62,66 @@
         };
     };
 
+    macros {
+        colon_equal: colon_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
+        combo_colon_equal {
+            timeout-ms = <75>;
+            key-positions = <24 29>; // ; + /
+            bindings = <&colon_equal>;
+            layers = <BASE>;
+        };
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <21 22>; // J + K
             bindings = <&kp ESC>;
             layers = <BASE>;
         };
         combo_apostrophe {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <23 24>; // L + ;
             bindings = <&kp SQT>;
             layers = <BASE>;
         };
         combo_lpar {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <3 4>; // R + T
             bindings = <&kp LPAR>;
             layers = <BASE>;
         };
         combo_rpar {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <15 16>; // Y + U
             bindings = <&kp RPAR>;
             layers = <BASE>;
         };
         combo_lbkt {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <8 9>; // F + G
             bindings = <&kp LBKT>;
             layers = <BASE>;
         };
         combo_rbkt {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <20 21>; // H + J
             bindings = <&kp RBKT>;
             layers = <BASE>;
         };
         combo_lbrc {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <13 14>; // V + B
             bindings = <&kp LBRC>;
             layers = <BASE>;
         };
         combo_rbrc {
-            timeout-ms = <50>;
+            timeout-ms = <75>;
             key-positions = <25 26>; // N + M
             bindings = <&kp RBRC>;
             layers = <BASE>;
